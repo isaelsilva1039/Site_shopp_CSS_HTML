@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background: rgb(149,65,171);
+    background: linear-gradient(111deg, rgba(149,65,171,1) 0%, rgba(139,247,249,1) 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius:10px;
+    background: inherit;
+    overflow: hidden;
+    z-index: -1;
+
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.content img{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) rotate(-25deg);
+    animation: move 2s infinite alternate ease-in-out;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px; 
+  }
+
+  nav{
+      display:flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      font-weight: bold;
+  }
+
+  nav ul {
+      list-style: none;
+      display: flex;
+      color: white;
+      padding: 0;
+  }
+
+  nav ul li {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul li.active{
+      background:#FC8828;
+      justify-content: center;
+      padding: 3px 15px;
+      border-radius: 0 10px;
+  }
+
+  .content{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      position: relative;
+  }
+  
+  
+  .social-media{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    width: fit-content;
+    height: 100%;
+    justify-content: center; 
+  }
+
+  .social-media svg{
+      margin: 15px 20px;
+  }
+  
+  .containe-last{
+      display: flex;
+  }
+
+  .containe-text{
+      color: white;
+      width: 100%;
+      /* height: 100%; */
+      /* background-color: blue; */
+      padding: 0 50px;
+  }
+
+  .content  h3 , h1{
+      margin: 0;
+  }
+
+  
+  .content  h1{
+    font-size: 56px;
+}
+
+  .content  .right{
+    text-align: right;
+    margin-top: 350px;
+}
+
+.content  .left{
+    margin-top: -500px;    
+}
+
+@keyframes move{
+    from{
+        transform: translate(-55% , -55%) rotate(-27deg);
+    }
+}
+
+.pre-ordem{
+    background:#FC8828;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius : 8px 0px 0px 0px;
+}
+
+ .pre-ordem svg{
+    margin-right: 15px;
+}
+ 
